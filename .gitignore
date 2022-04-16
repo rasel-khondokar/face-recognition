@@ -1,0 +1,17 @@
+__pycache__/
+venv/
+chromedriver_linux64/
+.idea/
+*.pyc
+*.pdf
+*.log
+All log/
+Attendance/
+Encoded_data/
+Encoded_faces/
+Faces/
+New_face/
+test.py
+encodings
+encoded_faces
+employees.json

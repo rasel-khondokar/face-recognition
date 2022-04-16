@@ -1,0 +1,14 @@
+[Unit]
+Description=Attendance
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/Home/Projects/attendance/shell_and_service_files/standard.sh
+Restart=on-failure
+RestartSec=10
+KillMode=control-group
+
+[Install]
+WantedBy=multi-user.target
+
