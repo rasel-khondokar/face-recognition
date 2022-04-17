@@ -1,11 +1,16 @@
 # Redis server
 import json
 
+
 REDIS_URL = 'redis://localhost:6379/0'
 # Interval time for same face (in seconds)
 INTERVAL_TIME_SAME_FACE = 10
 # Preview time of each face (in seconds)
 PREVIEW_TIME = 5
+
+# model name
+MODEL_NAME = "cnn"
+# MODEL_NAME = "hog"
 
 # Notification Image size
 IMAGE_SIZE = (300, 300)

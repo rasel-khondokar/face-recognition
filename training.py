@@ -7,7 +7,7 @@ import face_recognition
 import cv2
 import numpy as np
 import pickle
-from settings import SELECT_CAM, NUMBER_OF_IMAGE, FILENAME_EMPS
+from settings import SELECT_CAM, NUMBER_OF_IMAGE, FILENAME_EMPS, MODEL_NAME
 from functions import if_dir_not_exists, add_to_emps
 from encode_faces import encode_faces, add_new_with_existing
 # initialize the log settings
@@ -64,7 +64,7 @@ try:
         rgb_frame = frame[:, :, ::-1]
         # Find all the faces and face encodings in the frame of video
         face_location = None
-        face_locations = face_recognition.face_locations(rgb_frame)
+        face_locations = face_recognition.face_locations(rgb_frame,model=MODEL_NAME)
         for (top, right, bottom, left) in face_locations:
             padding = 100
             selected_area_face = frame[top - padding:bottom + padding, left - padding:right + padding]

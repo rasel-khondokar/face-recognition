@@ -7,7 +7,7 @@ import face_recognition
 import cv2
 import numpy as np
 import pickle
-from settings import SELECT_CAM
+from settings import SELECT_CAM, MODEL_NAME
 from functions import check_if_recent, queue_to_redis, if_dir_not_exists, filename_format
 
 # initialize the log settings
@@ -62,7 +62,7 @@ try:
         # Find all the faces and face encodings in the frame of video
         # face_locations = face_recognition.face_locations(rgb_frame, model="cnn")
         face_location = None
-        face_locations = face_recognition.face_locations(rgb_frame, model="cnn")
+        face_locations = face_recognition.face_locations(rgb_frame, model=MODEL_NAME)
         face_encodings = face_recognition.face_encodings(rgb_frame, face_locations)
 
         # Loop through each face in this frame of video
